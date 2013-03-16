@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6DF4BB4A16F428C700EACECA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF4BB4916F428C700EACECA /* Cocoa.framework */; };
+		6DF4BB5416F428C700EACECA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DF4BB5216F428C700EACECA /* InfoPlist.strings */; };
+		6DF4BB5616F428C700EACECA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB5516F428C700EACECA /* main.m */; };
+		6DF4BB5A16F428C700EACECA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6DF4BB5816F428C700EACECA /* Credits.rtf */; };
+		6DF4BB5D16F428C700EACECA /* SAMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB5C16F428C700EACECA /* SAMAppDelegate.m */; };
+		6DF4BB6016F428C800EACECA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF4BB5E16F428C800EACECA /* MainMenu.xib */; };
+		6DF4BB6816F428C800EACECA /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF4BB6716F428C800EACECA /* SenTestingKit.framework */; };
+		6DF4BB6916F428C800EACECA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF4BB4916F428C700EACECA /* Cocoa.framework */; };
+		6DF4BB7116F428C800EACECA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DF4BB6F16F428C800EACECA /* InfoPlist.strings */; };
+		6DF4BB7416F428C800EACECA /* SAMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB7316F428C800EACECA /* SAMTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6DF4BB6A16F428C800EACECA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DF4BB3E16F428C700EACECA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DF4BB4516F428C700EACECA;
+			remoteInfo = SAM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6DF4BB4616F428C700EACECA /* SAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DF4BB4916F428C700EACECA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		6DF4BB4C16F428C700EACECA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		6DF4BB4D16F428C700EACECA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6DF4BB4E16F428C700EACECA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6DF4BB5116F428C700EACECA /* SAM-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SAM-Info.plist"; sourceTree = "<group>"; };
+		6DF4BB5316F428C700EACECA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6DF4BB5516F428C700EACECA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6DF4BB5716F428C700EACECA /* SAM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SAM-Prefix.pch"; sourceTree = "<group>"; };
+		6DF4BB5916F428C700EACECA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		6DF4BB5B16F428C700EACECA /* SAMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMAppDelegate.h; sourceTree = "<group>"; };
+		6DF4BB5C16F428C700EACECA /* SAMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAMAppDelegate.m; sourceTree = "<group>"; };
+		6DF4BB5F16F428C800EACECA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		6DF4BB6616F428C800EACECA /* SAMTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAMTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DF4BB6716F428C800EACECA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		6DF4BB6E16F428C800EACECA /* SAMTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SAMTests-Info.plist"; sourceTree = "<group>"; };
+		6DF4BB7016F428C800EACECA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6DF4BB7216F428C800EACECA /* SAMTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMTests.h; sourceTree = "<group>"; };
+		6DF4BB7316F428C800EACECA /* SAMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAMTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6DF4BB4316F428C700EACECA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DF4BB4A16F428C700EACECA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DF4BB6216F428C800EACECA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DF4BB6816F428C800EACECA /* SenTestingKit.framework in Frameworks */,
+				6DF4BB6916F428C800EACECA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6DF4BB3D16F428C700EACECA = {
+			isa = PBXGroup;
+			children = (
+				6DF4BB4F16F428C700EACECA /* SAM */,
+				6DF4BB6C16F428C800EACECA /* SAMTests */,
+				6DF4BB4816F428C700EACECA /* Frameworks */,
+				6DF4BB4716F428C700EACECA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6DF4BB4716F428C700EACECA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6DF4BB4616F428C700EACECA /* SAM.app */,
+				6DF4BB6616F428C800EACECA /* SAMTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6DF4BB4816F428C700EACECA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DF4BB4916F428C700EACECA /* Cocoa.framework */,
+				6DF4BB6716F428C800EACECA /* SenTestingKit.framework */,
+				6DF4BB4B16F428C700EACECA /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6DF4BB4B16F428C700EACECA /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DF4BB4C16F428C700EACECA /* AppKit.framework */,
+				6DF4BB4D16F428C700EACECA /* CoreData.framework */,
+				6DF4BB4E16F428C700EACECA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		6DF4BB4F16F428C700EACECA /* SAM */ = {
+			isa = PBXGroup;
+			children = (
+				6DF4BB5B16F428C700EACECA /* SAMAppDelegate.h */,
+				6DF4BB5C16F428C700EACECA /* SAMAppDelegate.m */,
+				6DF4BB5E16F428C800EACECA /* MainMenu.xib */,
+				6DF4BB5016F428C700EACECA /* Supporting Files */,
+			);
+			path = SAM;
+			sourceTree = "<group>";
+		};
+		6DF4BB5016F428C700EACECA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6DF4BB5116F428C700EACECA /* SAM-Info.plist */,
+				6DF4BB5216F428C700EACECA /* InfoPlist.strings */,
+				6DF4BB5516F428C700EACECA /* main.m */,
+				6DF4BB5716F428C700EACECA /* SAM-Prefix.pch */,
+				6DF4BB5816F428C700EACECA /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6DF4BB6C16F428C800EACECA /* SAMTests */ = {
+			isa = PBXGroup;
+			children = (
+				6DF4BB7216F428C800EACECA /* SAMTests.h */,
+				6DF4BB7316F428C800EACECA /* SAMTests.m */,
+				6DF4BB6D16F428C800EACECA /* Supporting Files */,
+			);
+			path = SAMTests;
+			sourceTree = "<group>";
+		};
+		6DF4BB6D16F428C800EACECA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6DF4BB6E16F428C800EACECA /* SAMTests-Info.plist */,
+				6DF4BB6F16F428C800EACECA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6DF4BB4516F428C700EACECA /* SAM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DF4BB7716F428C800EACECA /* Build configuration list for PBXNativeTarget "SAM" */;
+			buildPhases = (
+				6DF4BB4216F428C700EACECA /* Sources */,
+				6DF4BB4316F428C700EACECA /* Frameworks */,
+				6DF4BB4416F428C700EACECA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SAM;
+			productName = SAM;
+			productReference = 6DF4BB4616F428C700EACECA /* SAM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6DF4BB6516F428C800EACECA /* SAMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DF4BB7A16F428C800EACECA /* Build configuration list for PBXNativeTarget "SAMTests" */;
+			buildPhases = (
+				6DF4BB6116F428C800EACECA /* Sources */,
+				6DF4BB6216F428C800EACECA /* Frameworks */,
+				6DF4BB6316F428C800EACECA /* Resources */,
+				6DF4BB6416F428C800EACECA /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6DF4BB6B16F428C800EACECA /* PBXTargetDependency */,
+			);
+			name = SAMTests;
+			productName = SAMTests;
+			productReference = 6DF4BB6616F428C800EACECA /* SAMTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6DF4BB3E16F428C700EACECA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SAM;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Stepan Generalov";
+			};
+			buildConfigurationList = 6DF4BB4116F428C700EACECA /* Build configuration list for PBXProject "SAM" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6DF4BB3D16F428C700EACECA;
+			productRefGroup = 6DF4BB4716F428C700EACECA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6DF4BB4516F428C700EACECA /* SAM */,
+				6DF4BB6516F428C800EACECA /* SAMTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6DF4BB4416F428C700EACECA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DF4BB5416F428C700EACECA /* InfoPlist.strings in Resources */,
+				6DF4BB5A16F428C700EACECA /* Credits.rtf in Resources */,
+				6DF4BB6016F428C800EACECA /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DF4BB6316F428C800EACECA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DF4BB7116F428C800EACECA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6DF4BB6416F428C800EACECA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6DF4BB4216F428C700EACECA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DF4BB5616F428C700EACECA /* main.m in Sources */,
+				6DF4BB5D16F428C700EACECA /* SAMAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DF4BB6116F428C800EACECA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DF4BB7416F428C800EACECA /* SAMTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6DF4BB6B16F428C800EACECA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6DF4BB4516F428C700EACECA /* SAM */;
+			targetProxy = 6DF4BB6A16F428C800EACECA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6DF4BB5216F428C700EACECA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DF4BB5316F428C700EACECA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6DF4BB5816F428C700EACECA /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DF4BB5916F428C700EACECA /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		6DF4BB5E16F428C800EACECA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DF4BB5F16F428C800EACECA /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		6DF4BB6F16F428C800EACECA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DF4BB7016F428C800EACECA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6DF4BB7516F428C800EACECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6DF4BB7616F428C800EACECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6DF4BB7816F428C800EACECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SAM/SAM-Prefix.pch";
+				INFOPLIST_FILE = "SAM/SAM-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6DF4BB7916F428C800EACECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SAM/SAM-Prefix.pch";
+				INFOPLIST_FILE = "SAM/SAM-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6DF4BB7B16F428C800EACECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SAM.app/Contents/MacOS/SAM";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SAM/SAM-Prefix.pch";
+				INFOPLIST_FILE = "SAMTests/SAMTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		6DF4BB7C16F428C800EACECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SAM.app/Contents/MacOS/SAM";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SAM/SAM-Prefix.pch";
+				INFOPLIST_FILE = "SAMTests/SAMTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6DF4BB4116F428C700EACECA /* Build configuration list for PBXProject "SAM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DF4BB7516F428C800EACECA /* Debug */,
+				6DF4BB7616F428C800EACECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DF4BB7716F428C800EACECA /* Build configuration list for PBXNativeTarget "SAM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DF4BB7816F428C800EACECA /* Debug */,
+				6DF4BB7916F428C800EACECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6DF4BB7A16F428C800EACECA /* Build configuration list for PBXNativeTarget "SAMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DF4BB7B16F428C800EACECA /* Debug */,
+				6DF4BB7C16F428C800EACECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6DF4BB3E16F428C700EACECA /* Project object */;
+}
