@@ -20,6 +20,7 @@
 		6DF4BB8016F42D2F00EACECA /* SAMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB7E16F42D2F00EACECA /* SAMSettingsViewController.m */; };
 		6DF4BB8116F42D2F00EACECA /* SAMSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF4BB7F16F42D2F00EACECA /* SAMSettingsViewController.xib */; };
 		6DF4BB8316F442CB00EACECA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6DF4BB8216F442CA00EACECA /* Podfile */; };
+		6DF4BB8516F4460100EACECA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF4BB8416F4460100EACECA /* SystemConfiguration.framework */; };
 		B0268C7668A74EBDA3A9304A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D34FD12FEF414CBE2AB747 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		6DF4BB7E16F42D2F00EACECA /* SAMSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMSettingsViewController.m; sourceTree = "<group>"; };
 		6DF4BB7F16F42D2F00EACECA /* SAMSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAMSettingsViewController.xib; sourceTree = "<group>"; };
 		6DF4BB8216F442CA00EACECA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		6DF4BB8416F4460100EACECA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C3D34FD12FEF414CBE2AB747 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DF4BB8516F4460100EACECA /* SystemConfiguration.framework in Frameworks */,
 				6DF4BB4A16F428C700EACECA /* Cocoa.framework in Frameworks */,
 				B0268C7668A74EBDA3A9304A /* libPods.a in Frameworks */,
 			);
@@ -107,6 +110,7 @@
 		6DF4BB4816F428C700EACECA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6DF4BB8416F4460100EACECA /* SystemConfiguration.framework */,
 				6DF4BB4916F428C700EACECA /* Cocoa.framework */,
 				6DF4BB6716F428C800EACECA /* SenTestingKit.framework */,
 				6DF4BB4B16F428C700EACECA /* Other Frameworks */,
