@@ -10,6 +10,7 @@
 #import "SAMSettingsViewController.h"
 #import <AFNetworking.h>
 #import <BlocksKit.h>
+#import "SAMClient.h"
 
 @interface SAMAppDelegate ()
 
@@ -24,10 +25,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     self.settings = [[SAMSettingsViewController alloc] init];
-    self.client = [AFHTTPClient clientWithBaseURL: [NSURL URLWithString:@"https://app.asana.com/api/1.0/"]];
-    [self.client setAuthorizationHeaderWithUsername: self.settings.APIToken password:@""];
-
-    NSLog(@"API token = %@", self.settings.APIToken);
+    [SAMClient sharedClient].APIToken = self.settings.APIToken;
 }
 
 - (IBAction) fullscreenPressed: (id) sender
@@ -45,10 +43,12 @@
 
 - (IBAction)refresh:(id)sender
 {
-#define API(first, ...) [NSString pathWithComponents: @[ first, __VA_ARGS__ ]]
+    // Update settings.
+    [SAMClient sharedClient].APIToken = self.settings.APIToken;
 
+    // Start fetching data.
     NSString *path = API(@"workspaces", self.settings.workspaceID, @"projects");
-    [self getPath: path block:^(NSDictionary *jsonObject)
+    [[SAMClient sharedClient] getPath: path block:^(NSDictionary *jsonObject)
      {
          NSArray *data = jsonObject[@"data"];
          NSDictionary *sprintBacklog = [data match: ^(NSDictionary *project)
@@ -58,36 +58,12 @@
 
                                             return NO;
                                         }];
-         [self getPath: API(@"projects", [sprintBacklog[@"id"] stringValue], @"tasks")
+         [[SAMClient sharedClient] getPath: API(@"projects", [sprintBacklog[@"id"] stringValue], @"tasks")
                  block: ^(NSDictionary *sprint)
           {
               NSLog(@"user stories = %@", sprint[@"data"]);
           }];
      }];
-}
-
-- (void) getPath: (NSString *) path block: (void(^)(NSDictionary *)) aBlock
-{
-    void (^onError)(id, id) = ^(id error, id additionalStuff)
-    {
-        NSLog(@"error getting %@ = %@, additional: %@", path, error, additionalStuff);
-    };
-
-    [self.client setAuthorizationHeaderWithUsername: self.settings.APIToken password:@""];
-    NSURLRequest *request = [self.client requestWithMethod:@"GET" path: path parameters: @{}];
-    AFJSONRequestOperation *jsonRequest =
-    [AFJSONRequestOperation JSONRequestOperationWithRequest: request
-                                                    success: ^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-                                                        if (![JSON isKindOfClass:[NSDictionary class]]) {
-                                                            onError(@"Dict expected!", JSON );
-                                                        }
-
-                                                        aBlock(JSON);
-                                                    }
-                                                    failure: ^(NSURLRequest *request, NSHTTPURLResponse *response, id error, id JSON) {
-                                                        onError(error, JSON);
-                                                    }];
-    [jsonRequest start];
 }
 
 @end
