@@ -43,8 +43,10 @@ static SAMClient *_sharedClient = nil;
 
 #pragma mark API Access
 
-- (void) getPath: (NSString *) path block: (void(^)(NSDictionary *)) aBlock
+- (void) get: (NSArray *) pathComponents block: (void(^)(NSDictionary *)) aBlock
 {
+    NSString *path = [NSString pathWithComponents: pathComponents];
+
     void (^onError)(id, id) = ^(id error, id additionalStuff)
     {
         NSLog(@"error getting %@ = %@, additional: %@", path, error, additionalStuff);

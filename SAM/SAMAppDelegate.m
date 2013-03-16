@@ -47,8 +47,8 @@
     [SAMClient sharedClient].APIToken = self.settings.APIToken;
 
     // Start fetching data.
-    NSString *path = API(@"workspaces", self.settings.workspaceID, @"projects");
-    [[SAMClient sharedClient] getPath: path block:^(NSDictionary *jsonObject)
+    [[SAMClient sharedClient] get: @[@"workspaces", self.settings.workspaceID, @"projects"]
+                            block: ^(NSDictionary *jsonObject)
      {
          NSArray *data = jsonObject[@"data"];
          NSDictionary *sprintBacklog = [data match: ^(NSDictionary *project)
@@ -58,8 +58,9 @@
 
                                             return NO;
                                         }];
-         [[SAMClient sharedClient] getPath: API(@"projects", [sprintBacklog[@"id"] stringValue], @"tasks")
-                 block: ^(NSDictionary *sprint)
+         
+         [[SAMClient sharedClient] get: @[@"projects", [sprintBacklog[@"id"] stringValue], @"tasks"]
+                                 block: ^(NSDictionary *sprint)
           {
               NSLog(@"user stories = %@", sprint[@"data"]);
           }];

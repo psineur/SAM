@@ -8,14 +8,15 @@
 
 #import "AFHTTPClient.h"
 
-#define API(first, ...) [NSString pathWithComponents: @[ first, __VA_ARGS__ ]]
-
 @interface SAMClient : AFHTTPClient
 
 + (instancetype) sharedClient;
 
 @property(nonatomic, copy) NSString *APIToken;
 
-- (void) getPath: (NSString *) path block: (void(^)(NSDictionary *)) aBlock;
+/**
+ * @param path Array of strings, which will be used to create path with [NSString pathWithComponents: ]
+ */
+- (void) get: (NSArray *) pathComponents block: (void(^)(NSDictionary *)) aBlock;
 
 @end
