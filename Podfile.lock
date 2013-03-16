@@ -1,11 +1,14 @@
 
+SPEC CHECKSUMS: 
+  AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
+  BlocksKit: 18102744fd7c44b54f1e54ce6ffe9258bcb5df81
+
 COCOAPODS: 0.16.4
 
 PODS: 
 - AFNetworking (1.1.0)
-
-SPEC CHECKSUMS: 
-  AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
+- BlocksKit (1.8.1)
 
 DEPENDENCIES: 
 - AFNetworking (~> 1.1.0)
+- BlocksKit (~> 1.8.1)
