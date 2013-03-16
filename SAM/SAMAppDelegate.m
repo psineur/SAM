@@ -9,6 +9,7 @@
 #import "SAMAppDelegate.h"
 #import "SAMSettingsViewController.h"
 #import <AFNetworking.h>
+#import <BlocksKit.h>
 
 @interface SAMAppDelegate ()
 
@@ -44,12 +45,24 @@
 
 - (IBAction)refresh:(id)sender
 {
-#define API(first, ...) [NSString pathWithComponents: @[ first, __VA_ARGS__ ]];
+#define API(first, ...) [NSString pathWithComponents: @[ first, __VA_ARGS__ ]]
 
     NSString *path = API(@"workspaces", self.settings.workspaceID, @"projects");
     [self getPath: path block:^(NSDictionary *jsonObject)
      {
-         NSLog(@"object = %@", jsonObject);
+         NSArray *data = jsonObject[@"data"];
+         NSDictionary *sprintBacklog = [data match: ^(NSDictionary *project)
+                                        {
+                                            if ([project[@"name"] isEqualToString:@"Sprint Backlog"])
+                                                return YES;
+
+                                            return NO;
+                                        }];
+         [self getPath: API(@"projects", [sprintBacklog[@"id"] stringValue], @"tasks")
+                 block: ^(NSDictionary *sprint)
+          {
+              NSLog(@"user stories = %@", sprint[@"data"]);
+          }];
      }];
 }
 
