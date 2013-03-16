@@ -1,478 +1,1087 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		6DF4BB4A16F428C700EACECA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF4BB4916F428C700EACECA /* Cocoa.framework */; };
-		6DF4BB5416F428C700EACECA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DF4BB5216F428C700EACECA /* InfoPlist.strings */; };
-		6DF4BB5616F428C700EACECA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB5516F428C700EACECA /* main.m */; };
-		6DF4BB5A16F428C700EACECA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6DF4BB5816F428C700EACECA /* Credits.rtf */; };
-		6DF4BB5D16F428C700EACECA /* SAMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB5C16F428C700EACECA /* SAMAppDelegate.m */; };
-		6DF4BB6016F428C800EACECA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF4BB5E16F428C800EACECA /* MainMenu.xib */; };
-		6DF4BB6816F428C800EACECA /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF4BB6716F428C800EACECA /* SenTestingKit.framework */; };
-		6DF4BB6916F428C800EACECA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF4BB4916F428C700EACECA /* Cocoa.framework */; };
-		6DF4BB7116F428C800EACECA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DF4BB6F16F428C800EACECA /* InfoPlist.strings */; };
-		6DF4BB7416F428C800EACECA /* SAMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB7316F428C800EACECA /* SAMTests.m */; };
-		6DF4BB8016F42D2F00EACECA /* SAMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB7E16F42D2F00EACECA /* SAMSettingsViewController.m */; };
-		6DF4BB8116F42D2F00EACECA /* SAMSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF4BB7F16F42D2F00EACECA /* SAMSettingsViewController.xib */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		6DF4BB6A16F428C800EACECA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6DF4BB3E16F428C700EACECA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6DF4BB4516F428C700EACECA;
-			remoteInfo = SAM;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		6DF4BB4616F428C700EACECA /* SAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DF4BB4916F428C700EACECA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		6DF4BB4C16F428C700EACECA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		6DF4BB4D16F428C700EACECA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		6DF4BB4E16F428C700EACECA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		6DF4BB5116F428C700EACECA /* SAM-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SAM-Info.plist"; sourceTree = "<group>"; };
-		6DF4BB5316F428C700EACECA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6DF4BB5516F428C700EACECA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6DF4BB5716F428C700EACECA /* SAM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SAM-Prefix.pch"; sourceTree = "<group>"; };
-		6DF4BB5916F428C700EACECA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		6DF4BB5B16F428C700EACECA /* SAMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMAppDelegate.h; sourceTree = "<group>"; };
-		6DF4BB5C16F428C700EACECA /* SAMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAMAppDelegate.m; sourceTree = "<group>"; };
-		6DF4BB5F16F428C800EACECA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		6DF4BB6616F428C800EACECA /* SAMTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SAMTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DF4BB6716F428C800EACECA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		6DF4BB6E16F428C800EACECA /* SAMTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SAMTests-Info.plist"; sourceTree = "<group>"; };
-		6DF4BB7016F428C800EACECA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6DF4BB7216F428C800EACECA /* SAMTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMTests.h; sourceTree = "<group>"; };
-		6DF4BB7316F428C800EACECA /* SAMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAMTests.m; sourceTree = "<group>"; };
-		6DF4BB7D16F42D2F00EACECA /* SAMSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMSettingsViewController.h; sourceTree = "<group>"; };
-		6DF4BB7E16F42D2F00EACECA /* SAMSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMSettingsViewController.m; sourceTree = "<group>"; };
-		6DF4BB7F16F42D2F00EACECA /* SAMSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAMSettingsViewController.xib; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		6DF4BB4316F428C700EACECA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6DF4BB4A16F428C700EACECA /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6DF4BB6216F428C800EACECA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6DF4BB6816F428C800EACECA /* SenTestingKit.framework in Frameworks */,
-				6DF4BB6916F428C800EACECA /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		6DF4BB3D16F428C700EACECA = {
-			isa = PBXGroup;
-			children = (
-				6DF4BB4F16F428C700EACECA /* SAM */,
-				6DF4BB6C16F428C800EACECA /* SAMTests */,
-				6DF4BB4816F428C700EACECA /* Frameworks */,
-				6DF4BB4716F428C700EACECA /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		6DF4BB4716F428C700EACECA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6DF4BB4616F428C700EACECA /* SAM.app */,
-				6DF4BB6616F428C800EACECA /* SAMTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6DF4BB4816F428C700EACECA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6DF4BB4916F428C700EACECA /* Cocoa.framework */,
-				6DF4BB6716F428C800EACECA /* SenTestingKit.framework */,
-				6DF4BB4B16F428C700EACECA /* Other Frameworks */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6DF4BB4B16F428C700EACECA /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6DF4BB4C16F428C700EACECA /* AppKit.framework */,
-				6DF4BB4D16F428C700EACECA /* CoreData.framework */,
-				6DF4BB4E16F428C700EACECA /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		6DF4BB4F16F428C700EACECA /* SAM */ = {
-			isa = PBXGroup;
-			children = (
-				6DF4BB5B16F428C700EACECA /* SAMAppDelegate.h */,
-				6DF4BB5C16F428C700EACECA /* SAMAppDelegate.m */,
-				6DF4BB5E16F428C800EACECA /* MainMenu.xib */,
-				6DF4BB5016F428C700EACECA /* Supporting Files */,
-				6DF4BB7D16F42D2F00EACECA /* SAMSettingsViewController.h */,
-				6DF4BB7E16F42D2F00EACECA /* SAMSettingsViewController.m */,
-				6DF4BB7F16F42D2F00EACECA /* SAMSettingsViewController.xib */,
-			);
-			path = SAM;
-			sourceTree = "<group>";
-		};
-		6DF4BB5016F428C700EACECA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6DF4BB5116F428C700EACECA /* SAM-Info.plist */,
-				6DF4BB5216F428C700EACECA /* InfoPlist.strings */,
-				6DF4BB5516F428C700EACECA /* main.m */,
-				6DF4BB5716F428C700EACECA /* SAM-Prefix.pch */,
-				6DF4BB5816F428C700EACECA /* Credits.rtf */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6DF4BB6C16F428C800EACECA /* SAMTests */ = {
-			isa = PBXGroup;
-			children = (
-				6DF4BB7216F428C800EACECA /* SAMTests.h */,
-				6DF4BB7316F428C800EACECA /* SAMTests.m */,
-				6DF4BB6D16F428C800EACECA /* Supporting Files */,
-			);
-			path = SAMTests;
-			sourceTree = "<group>";
-		};
-		6DF4BB6D16F428C800EACECA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6DF4BB6E16F428C800EACECA /* SAMTests-Info.plist */,
-				6DF4BB6F16F428C800EACECA /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		6DF4BB4516F428C700EACECA /* SAM */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6DF4BB7716F428C800EACECA /* Build configuration list for PBXNativeTarget "SAM" */;
-			buildPhases = (
-				6DF4BB4216F428C700EACECA /* Sources */,
-				6DF4BB4316F428C700EACECA /* Frameworks */,
-				6DF4BB4416F428C700EACECA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SAM;
-			productName = SAM;
-			productReference = 6DF4BB4616F428C700EACECA /* SAM.app */;
-			productType = "com.apple.product-type.application";
-		};
-		6DF4BB6516F428C800EACECA /* SAMTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6DF4BB7A16F428C800EACECA /* Build configuration list for PBXNativeTarget "SAMTests" */;
-			buildPhases = (
-				6DF4BB6116F428C800EACECA /* Sources */,
-				6DF4BB6216F428C800EACECA /* Frameworks */,
-				6DF4BB6316F428C800EACECA /* Resources */,
-				6DF4BB6416F428C800EACECA /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6DF4BB6B16F428C800EACECA /* PBXTargetDependency */,
-			);
-			name = SAMTests;
-			productName = SAMTests;
-			productReference = 6DF4BB6616F428C800EACECA /* SAMTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		6DF4BB3E16F428C700EACECA /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				CLASSPREFIX = SAM;
-				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = "Stepan Generalov";
-			};
-			buildConfigurationList = 6DF4BB4116F428C700EACECA /* Build configuration list for PBXProject "SAM" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = 6DF4BB3D16F428C700EACECA;
-			productRefGroup = 6DF4BB4716F428C700EACECA /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				6DF4BB4516F428C700EACECA /* SAM */,
-				6DF4BB6516F428C800EACECA /* SAMTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		6DF4BB4416F428C700EACECA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6DF4BB5416F428C700EACECA /* InfoPlist.strings in Resources */,
-				6DF4BB5A16F428C700EACECA /* Credits.rtf in Resources */,
-				6DF4BB6016F428C800EACECA /* MainMenu.xib in Resources */,
-				6DF4BB8116F42D2F00EACECA /* SAMSettingsViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6DF4BB6316F428C800EACECA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6DF4BB7116F428C800EACECA /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		6DF4BB6416F428C800EACECA /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		6DF4BB4216F428C700EACECA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6DF4BB5616F428C700EACECA /* main.m in Sources */,
-				6DF4BB5D16F428C700EACECA /* SAMAppDelegate.m in Sources */,
-				6DF4BB8016F42D2F00EACECA /* SAMSettingsViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6DF4BB6116F428C800EACECA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6DF4BB7416F428C800EACECA /* SAMTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6DF4BB6B16F428C800EACECA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6DF4BB4516F428C700EACECA /* SAM */;
-			targetProxy = 6DF4BB6A16F428C800EACECA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		6DF4BB5216F428C700EACECA /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6DF4BB5316F428C700EACECA /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		6DF4BB5816F428C700EACECA /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6DF4BB5916F428C700EACECA /* en */,
-			);
-			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		6DF4BB5E16F428C800EACECA /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6DF4BB5F16F428C800EACECA /* en */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		6DF4BB6F16F428C800EACECA /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6DF4BB7016F428C800EACECA /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		6DF4BB7516F428C800EACECA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		6DF4BB7616F428C800EACECA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		6DF4BB7816F428C800EACECA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SAM/SAM-Prefix.pch";
-				INFOPLIST_FILE = "SAM/SAM-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		6DF4BB7916F428C800EACECA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SAM/SAM-Prefix.pch";
-				INFOPLIST_FILE = "SAM/SAM-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		6DF4BB7B16F428C800EACECA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SAM.app/Contents/MacOS/SAM";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SAM/SAM-Prefix.pch";
-				INFOPLIST_FILE = "SAMTests/SAMTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		6DF4BB7C16F428C800EACECA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SAM.app/Contents/MacOS/SAM";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SAM/SAM-Prefix.pch";
-				INFOPLIST_FILE = "SAMTests/SAMTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		6DF4BB4116F428C700EACECA /* Build configuration list for PBXProject "SAM" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6DF4BB7516F428C800EACECA /* Debug */,
-				6DF4BB7616F428C800EACECA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6DF4BB7716F428C800EACECA /* Build configuration list for PBXNativeTarget "SAM" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6DF4BB7816F428C800EACECA /* Debug */,
-				6DF4BB7916F428C800EACECA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		6DF4BB7A16F428C800EACECA /* Build configuration list for PBXNativeTarget "SAMTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6DF4BB7B16F428C800EACECA /* Debug */,
-				6DF4BB7C16F428C800EACECA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 6DF4BB3E16F428C700EACECA /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>66F5201E73FC4D6E98E9025F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods.xcconfig</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>6DF4BB3D16F428C700EACECA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6DF4BB4F16F428C700EACECA</string>
+				<string>6DF4BB6C16F428C800EACECA</string>
+				<string>6DF4BB4816F428C700EACECA</string>
+				<string>6DF4BB4716F428C700EACECA</string>
+				<string>66F5201E73FC4D6E98E9025F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB3E16F428C700EACECA</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>CLASSPREFIX</key>
+				<string>SAM</string>
+				<key>LastUpgradeCheck</key>
+				<string>0460</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Stepan Generalov</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>6DF4BB4116F428C700EACECA</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>6DF4BB3D16F428C700EACECA</string>
+			<key>productRefGroup</key>
+			<string>6DF4BB4716F428C700EACECA</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>6DF4BB4516F428C700EACECA</string>
+				<string>6DF4BB6516F428C800EACECA</string>
+			</array>
+		</dict>
+		<key>6DF4BB4116F428C700EACECA</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>6DF4BB7516F428C800EACECA</string>
+				<string>6DF4BB7616F428C800EACECA</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>6DF4BB4216F428C700EACECA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6DF4BB5616F428C700EACECA</string>
+				<string>6DF4BB5D16F428C700EACECA</string>
+				<string>6DF4BB8016F42D2F00EACECA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>6DF4BB4316F428C700EACECA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6DF4BB4A16F428C700EACECA</string>
+				<string>B0268C7668A74EBDA3A9304A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>6DF4BB4416F428C700EACECA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6DF4BB5416F428C700EACECA</string>
+				<string>6DF4BB5A16F428C700EACECA</string>
+				<string>6DF4BB6016F428C800EACECA</string>
+				<string>6DF4BB8116F42D2F00EACECA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>6DF4BB4516F428C700EACECA</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>6DF4BB7716F428C800EACECA</string>
+			<key>buildPhases</key>
+			<array>
+				<string>6DF4BB4216F428C700EACECA</string>
+				<string>6DF4BB4316F428C700EACECA</string>
+				<string>6DF4BB4416F428C700EACECA</string>
+				<string>C9E4E89DAD0A4A9E9FC59471</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>SAM</string>
+			<key>productName</key>
+			<string>SAM</string>
+			<key>productReference</key>
+			<string>6DF4BB4616F428C700EACECA</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>6DF4BB4616F428C700EACECA</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>SAM.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>6DF4BB4716F428C700EACECA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6DF4BB4616F428C700EACECA</string>
+				<string>6DF4BB6616F428C800EACECA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB4816F428C700EACECA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6DF4BB4916F428C700EACECA</string>
+				<string>6DF4BB6716F428C800EACECA</string>
+				<string>6DF4BB4B16F428C700EACECA</string>
+				<string>C3D34FD12FEF414CBE2AB747</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB4916F428C700EACECA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Cocoa.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Cocoa.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>6DF4BB4A16F428C700EACECA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6DF4BB4916F428C700EACECA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6DF4BB4B16F428C700EACECA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6DF4BB4C16F428C700EACECA</string>
+				<string>6DF4BB4D16F428C700EACECA</string>
+				<string>6DF4BB4E16F428C700EACECA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Other Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB4C16F428C700EACECA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>AppKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/AppKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>6DF4BB4D16F428C700EACECA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreData.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreData.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>6DF4BB4E16F428C700EACECA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>6DF4BB4F16F428C700EACECA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6DF4BB5B16F428C700EACECA</string>
+				<string>6DF4BB5C16F428C700EACECA</string>
+				<string>6DF4BB5E16F428C800EACECA</string>
+				<string>6DF4BB5016F428C700EACECA</string>
+				<string>6DF4BB7D16F42D2F00EACECA</string>
+				<string>6DF4BB7E16F42D2F00EACECA</string>
+				<string>6DF4BB7F16F42D2F00EACECA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>SAM</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB5016F428C700EACECA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6DF4BB5116F428C700EACECA</string>
+				<string>6DF4BB5216F428C700EACECA</string>
+				<string>6DF4BB5516F428C700EACECA</string>
+				<string>6DF4BB5716F428C700EACECA</string>
+				<string>6DF4BB5816F428C700EACECA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB5116F428C700EACECA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>SAM-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB5216F428C700EACECA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6DF4BB5316F428C700EACECA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB5316F428C700EACECA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB5416F428C700EACECA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6DF4BB5216F428C700EACECA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6DF4BB5516F428C700EACECA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB5616F428C700EACECA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6DF4BB5516F428C700EACECA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6DF4BB5716F428C700EACECA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SAM-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB5816F428C700EACECA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6DF4BB5916F428C700EACECA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Credits.rtf</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB5916F428C700EACECA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.rtf</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/Credits.rtf</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB5A16F428C700EACECA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6DF4BB5816F428C700EACECA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6DF4BB5B16F428C700EACECA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SAMAppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB5C16F428C700EACECA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SAMAppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB5D16F428C700EACECA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6DF4BB5C16F428C700EACECA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6DF4BB5E16F428C800EACECA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6DF4BB5F16F428C800EACECA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MainMenu.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB5F16F428C800EACECA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/MainMenu.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB6016F428C800EACECA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6DF4BB5E16F428C800EACECA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6DF4BB6116F428C800EACECA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6DF4BB7416F428C800EACECA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>6DF4BB6216F428C800EACECA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6DF4BB6816F428C800EACECA</string>
+				<string>6DF4BB6916F428C800EACECA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>6DF4BB6316F428C800EACECA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6DF4BB7116F428C800EACECA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>6DF4BB6416F428C800EACECA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string># Run the unit tests in this test bundle.
+"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests"
+</string>
+		</dict>
+		<key>6DF4BB6516F428C800EACECA</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>6DF4BB7A16F428C800EACECA</string>
+			<key>buildPhases</key>
+			<array>
+				<string>6DF4BB6116F428C800EACECA</string>
+				<string>6DF4BB6216F428C800EACECA</string>
+				<string>6DF4BB6316F428C800EACECA</string>
+				<string>6DF4BB6416F428C800EACECA</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>6DF4BB6B16F428C800EACECA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>SAMTests</string>
+			<key>productName</key>
+			<string>SAMTests</string>
+			<key>productReference</key>
+			<string>6DF4BB6616F428C800EACECA</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle</string>
+		</dict>
+		<key>6DF4BB6616F428C800EACECA</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>SAMTests.octest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>6DF4BB6716F428C800EACECA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>SenTestingKit.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/SenTestingKit.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>6DF4BB6816F428C800EACECA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6DF4BB6716F428C800EACECA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6DF4BB6916F428C800EACECA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6DF4BB4916F428C700EACECA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6DF4BB6A16F428C800EACECA</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>6DF4BB3E16F428C700EACECA</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>6DF4BB4516F428C700EACECA</string>
+			<key>remoteInfo</key>
+			<string>SAM</string>
+		</dict>
+		<key>6DF4BB6B16F428C800EACECA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>6DF4BB4516F428C700EACECA</string>
+			<key>targetProxy</key>
+			<string>6DF4BB6A16F428C800EACECA</string>
+		</dict>
+		<key>6DF4BB6C16F428C800EACECA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6DF4BB7216F428C800EACECA</string>
+				<string>6DF4BB7316F428C800EACECA</string>
+				<string>6DF4BB6D16F428C800EACECA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>SAMTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB6D16F428C800EACECA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6DF4BB6E16F428C800EACECA</string>
+				<string>6DF4BB6F16F428C800EACECA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB6E16F428C800EACECA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>SAMTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB6F16F428C800EACECA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6DF4BB7016F428C800EACECA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB7016F428C800EACECA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB7116F428C800EACECA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6DF4BB6F16F428C800EACECA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6DF4BB7216F428C800EACECA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SAMTests.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB7316F428C800EACECA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SAMTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB7416F428C800EACECA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6DF4BB7316F428C800EACECA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6DF4BB7516F428C800EACECA</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_64_BIT)</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.7</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>6DF4BB7616F428C800EACECA</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_64_BIT)</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.7</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>6DF4BB7716F428C800EACECA</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>6DF4BB7816F428C800EACECA</string>
+				<string>6DF4BB7916F428C800EACECA</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>6DF4BB7816F428C800EACECA</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>66F5201E73FC4D6E98E9025F</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>SAM/SAM-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>SAM/SAM-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>6DF4BB7916F428C800EACECA</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>66F5201E73FC4D6E98E9025F</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>SAM/SAM-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>SAM/SAM-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>6DF4BB7A16F428C800EACECA</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>6DF4BB7B16F428C800EACECA</string>
+				<string>6DF4BB7C16F428C800EACECA</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>6DF4BB7B16F428C800EACECA</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/SAM.app/Contents/MacOS/SAM</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<string>"$(DEVELOPER_LIBRARY_DIR)/Frameworks"</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>SAM/SAM-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>SAMTests/SAMTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>octest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>6DF4BB7C16F428C800EACECA</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/SAM.app/Contents/MacOS/SAM</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<string>"$(DEVELOPER_LIBRARY_DIR)/Frameworks"</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>SAM/SAM-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>SAMTests/SAMTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>octest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>6DF4BB7D16F42D2F00EACECA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SAMSettingsViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB7E16F42D2F00EACECA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SAMSettingsViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB7F16F42D2F00EACECA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>SAMSettingsViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF4BB8016F42D2F00EACECA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6DF4BB7E16F42D2F00EACECA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6DF4BB8116F42D2F00EACECA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6DF4BB7F16F42D2F00EACECA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B0268C7668A74EBDA3A9304A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C3D34FD12FEF414CBE2AB747</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<key>C3D34FD12FEF414CBE2AB747</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libPods.a</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>C9E4E89DAD0A4A9E9FC59471</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>1</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>6DF4BB3E16F428C700EACECA</string>
+</dict>
+</plist>
