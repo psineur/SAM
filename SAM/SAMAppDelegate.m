@@ -44,7 +44,10 @@
 
 - (IBAction)refresh:(id)sender
 {
-    [self getPath:@"workspaces" block:^(NSDictionary *jsonObject)
+#define API(first, ...) [NSString pathWithComponents: @[ first, __VA_ARGS__ ]];
+
+    NSString *path = API(@"workspaces", self.settings.workspaceID, @"projects");
+    [self getPath: path block:^(NSDictionary *jsonObject)
      {
          NSLog(@"object = %@", jsonObject);
      }];
