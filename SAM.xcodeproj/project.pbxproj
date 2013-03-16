@@ -17,6 +17,8 @@
 		6DF4BB6916F428C800EACECA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF4BB4916F428C700EACECA /* Cocoa.framework */; };
 		6DF4BB7116F428C800EACECA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DF4BB6F16F428C800EACECA /* InfoPlist.strings */; };
 		6DF4BB7416F428C800EACECA /* SAMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB7316F428C800EACECA /* SAMTests.m */; };
+		6DF4BB8016F42D2F00EACECA /* SAMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB7E16F42D2F00EACECA /* SAMSettingsViewController.m */; };
+		6DF4BB8116F42D2F00EACECA /* SAMSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF4BB7F16F42D2F00EACECA /* SAMSettingsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,9 @@
 		6DF4BB7016F428C800EACECA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6DF4BB7216F428C800EACECA /* SAMTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMTests.h; sourceTree = "<group>"; };
 		6DF4BB7316F428C800EACECA /* SAMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAMTests.m; sourceTree = "<group>"; };
+		6DF4BB7D16F42D2F00EACECA /* SAMSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMSettingsViewController.h; sourceTree = "<group>"; };
+		6DF4BB7E16F42D2F00EACECA /* SAMSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMSettingsViewController.m; sourceTree = "<group>"; };
+		6DF4BB7F16F42D2F00EACECA /* SAMSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAMSettingsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +123,9 @@
 				6DF4BB5C16F428C700EACECA /* SAMAppDelegate.m */,
 				6DF4BB5E16F428C800EACECA /* MainMenu.xib */,
 				6DF4BB5016F428C700EACECA /* Supporting Files */,
+				6DF4BB7D16F42D2F00EACECA /* SAMSettingsViewController.h */,
+				6DF4BB7E16F42D2F00EACECA /* SAMSettingsViewController.m */,
+				6DF4BB7F16F42D2F00EACECA /* SAMSettingsViewController.xib */,
 			);
 			path = SAM;
 			sourceTree = "<group>";
@@ -228,6 +236,7 @@
 				6DF4BB5416F428C700EACECA /* InfoPlist.strings in Resources */,
 				6DF4BB5A16F428C700EACECA /* Credits.rtf in Resources */,
 				6DF4BB6016F428C800EACECA /* MainMenu.xib in Resources */,
+				6DF4BB8116F42D2F00EACECA /* SAMSettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +273,7 @@
 			files = (
 				6DF4BB5616F428C700EACECA /* main.m in Sources */,
 				6DF4BB5D16F428C700EACECA /* SAMAppDelegate.m in Sources */,
+				6DF4BB8016F42D2F00EACECA /* SAMSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

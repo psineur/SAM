@@ -1187,7 +1187,7 @@
 						<object class="NSMenu" key="NSSubmenu" id="466310130">
 							<string key="NSTitle">View</string>
 							<array class="NSMutableArray" key="NSMenuItems">
-								<object class="NSMenuItem" id="292720942">
+								<object class="NSMenuItem" id="637740387">
 									<reference key="NSMenu" ref="466310130"/>
 									<bool key="NSIsAlternate">YES</bool>
 									<int key="NSIndent">1</int>
@@ -1968,7 +1968,7 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">toggleFullScreen:</string>
 						<reference key="source" ref="972006081"/>
-						<reference key="destination" ref="292720942"/>
+						<reference key="destination" ref="637740387"/>
 					</object>
 					<int key="connectionID">541</int>
 				</object>
@@ -2019,6 +2019,14 @@
 						<reference key="destination" ref="972006081"/>
 					</object>
 					<int key="connectionID">532</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">settingsPressed:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="609285721"/>
+					</object>
+					<int key="connectionID">542</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2451,7 +2459,7 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="102151532"/>
 							<reference ref="237841660"/>
-							<reference ref="292720942"/>
+							<reference ref="637740387"/>
 						</array>
 						<reference key="parent" ref="586577488"/>
 					</object>
@@ -3022,7 +3030,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">536</int>
-						<reference key="object" ref="292720942"/>
+						<reference key="object" ref="637740387"/>
 						<reference key="parent" ref="466310130"/>
 					</object>
 				</array>
@@ -3188,13 +3196,27 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">541</int>
+			<int key="maxID">542</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">SAMAppDelegate</string>
 					<string key="superclassName">NSObject</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="fullscreenPressed:">id</string>
+						<string key="settingsPressed:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="fullscreenPressed:">
+							<string key="name">fullscreenPressed:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="settingsPressed:">
+							<string key="name">settingsPressed:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">window</string>
 						<string key="NS.object.0">NSWindow</string>
