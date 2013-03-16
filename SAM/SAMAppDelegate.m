@@ -44,17 +44,34 @@
 
 - (IBAction)refresh:(id)sender
 {
+    [self getPath:@"workspaces" block:^(NSDictionary *jsonObject)
+     {
+         NSLog(@"object = %@", jsonObject);
+     }];
+}
+
+- (void) getPath: (NSString *) path block: (void(^)(NSDictionary *)) aBlock
+{
+    void (^onError)(id, id) = ^(id error, id additionalStuff)
+    {
+        NSLog(@"error getting %@ = %@, additional: %@", path, error, additionalStuff);
+    };
+
     [self.client setAuthorizationHeaderWithUsername: self.settings.APIToken password:@""];
-    NSURLRequest *request = [self.client requestWithMethod:@"GET" path:@"workspaces" parameters: @{}];
-    AFJSONRequestOperation *test =
+    NSURLRequest *request = [self.client requestWithMethod:@"GET" path: path parameters: @{}];
+    AFJSONRequestOperation *jsonRequest =
     [AFJSONRequestOperation JSONRequestOperationWithRequest: request
                                                     success: ^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-                                                        NSLog(@"result = %@", JSON);
+                                                        if (![JSON isKindOfClass:[NSDictionary class]]) {
+                                                            onError(@"Dict expected!", JSON );
+                                                        }
+
+                                                        aBlock(JSON);
                                                     }
                                                     failure: ^(NSURLRequest *request, NSHTTPURLResponse *response, id error, id JSON) {
-                                                        NSLog(@"result = %@", JSON);
+                                                        onError(error, JSON);
                                                     }];
-    [test start];
+    [jsonRequest start];
 }
 
 @end
