@@ -26,6 +26,8 @@
 		6DF4BB8E16F5882800EACECA /* SAMUserStory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB8D16F5882700EACECA /* SAMUserStory.m */; };
 		6DF4BB9116F5934800EACECA /* SAMTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB9016F5934700EACECA /* SAMTask.m */; };
 		6DF4BB9516F599B500EACECA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF4BB9416F599B400EACECA /* QuartzCore.framework */; };
+		6DF4BB9C16F5B37D00EACECA /* SAMUserStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB9A16F5B37A00EACECA /* SAMUserStoryViewController.m */; };
+		6DF4BB9D16F5B37D00EACECA /* SAMUserStoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF4BB9B16F5B37B00EACECA /* SAMUserStoryViewController.xib */; };
 		B0268C7668A74EBDA3A9304A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D34FD12FEF414CBE2AB747 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,9 @@
 		6DF4BB9016F5934700EACECA /* SAMTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMTask.m; sourceTree = "<group>"; };
 		6DF4BB9216F5999700EACECA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6DF4BB9416F599B400EACECA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6DF4BB9916F5B37800EACECA /* SAMUserStoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMUserStoryViewController.h; sourceTree = "<group>"; };
+		6DF4BB9A16F5B37A00EACECA /* SAMUserStoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMUserStoryViewController.m; sourceTree = "<group>"; };
+		6DF4BB9B16F5B37B00EACECA /* SAMUserStoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAMUserStoryViewController.xib; sourceTree = "<group>"; };
 		C3D34FD12FEF414CBE2AB747 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -165,6 +170,9 @@
 				6DF4BB8D16F5882700EACECA /* SAMUserStory.m */,
 				6DF4BB8F16F5934600EACECA /* SAMTask.h */,
 				6DF4BB9016F5934700EACECA /* SAMTask.m */,
+				6DF4BB9916F5B37800EACECA /* SAMUserStoryViewController.h */,
+				6DF4BB9A16F5B37A00EACECA /* SAMUserStoryViewController.m */,
+				6DF4BB9B16F5B37B00EACECA /* SAMUserStoryViewController.xib */,
 			);
 			path = SAM;
 			sourceTree = "<group>";
@@ -278,6 +286,7 @@
 				6DF4BB6016F428C800EACECA /* MainMenu.xib in Resources */,
 				6DF4BB8116F42D2F00EACECA /* SAMSettingsViewController.xib in Resources */,
 				6DF4BB8316F442CB00EACECA /* Podfile in Resources */,
+				6DF4BB9D16F5B37D00EACECA /* SAMUserStoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +342,7 @@
 				6DF4BB8B16F5881600EACECA /* SAMSprintBacklog.m in Sources */,
 				6DF4BB8E16F5882800EACECA /* SAMUserStory.m in Sources */,
 				6DF4BB9116F5934800EACECA /* SAMTask.m in Sources */,
+				6DF4BB9C16F5B37D00EACECA /* SAMUserStoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
