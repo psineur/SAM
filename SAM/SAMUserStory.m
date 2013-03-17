@@ -7,6 +7,7 @@
 //
 
 #import "SAMUserStory.h"
+#import "SAMTask.h"
 
 @implementation SAMUserStory
 
@@ -44,7 +45,21 @@
          }];
         
         
-        // TODO: fetch tasks (subtasks in term of Asana) & setup parent-child relationship
+        // Fetch tasks (subtasks in term of Asana)
+        [client get: @[@"tasks", self.id, @"subtasks"]
+              block: ^(NSDictionary *response)
+         {
+             NSArray *tasksJSON = [NSArray arrayWithArray: response[@"data"]];
+             self.tasks = [NSMutableArray arrayWithCapacity: [tasksJSON count]];
+
+             [tasksJSON enumerateObjectsUsingBlock:^( id obj, NSUInteger idx, BOOL *stop)
+              {
+                  SAMTask *task = [SAMTask taskWithDictionary: obj client: client];
+                  task.parent = self;
+                  if (task)
+                      [self.tasks addObject: task];
+              }];
+         }];
 
     }
 

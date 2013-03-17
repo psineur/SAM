@@ -1,5 +1,5 @@
 //
-//  SAMUserStory.h
+//  SAMTask.h
 //  SAM
 //
 //  Created by Stepan Generalov on 16.03.13.
@@ -7,16 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SAMClient.h"
+@class SAMClient;
+@class SAMUserStory;
 
-/**@todo: subclass of task in the future for API */
-@interface SAMUserStory : NSObject
+/**
+ * @todo add estimate property
+ */
+@interface SAMTask : NSObject
 
 @property (strong, nonatomic) NSString *id;
 @property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *notes;
-@property (strong, nonatomic) NSMutableArray *tasks; //< array of SAMTasks
+@property (weak, nonatomic) SAMUserStory *parent;
 
-+ (instancetype) userStoryWithDictionary: (NSDictionary *) dict client: (SAMClient *) client;
++ (instancetype) taskWithDictionary: (NSDictionary *) dict client: (SAMClient *) client;
 - (instancetype) initWithDictionary: (NSDictionary *) dict client: (SAMClient *) client;
+
 @end

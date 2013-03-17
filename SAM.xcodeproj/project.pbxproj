@@ -24,6 +24,7 @@
 		6DF4BB8816F446AE00EACECA /* SAMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB8716F446AE00EACECA /* SAMClient.m */; };
 		6DF4BB8B16F5881600EACECA /* SAMSprintBacklog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB8A16F5881600EACECA /* SAMSprintBacklog.m */; };
 		6DF4BB8E16F5882800EACECA /* SAMUserStory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB8D16F5882700EACECA /* SAMUserStory.m */; };
+		6DF4BB9116F5934800EACECA /* SAMTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB9016F5934700EACECA /* SAMTask.m */; };
 		B0268C7668A74EBDA3A9304A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D34FD12FEF414CBE2AB747 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,8 @@
 		6DF4BB8A16F5881600EACECA /* SAMSprintBacklog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMSprintBacklog.m; sourceTree = "<group>"; };
 		6DF4BB8C16F5882600EACECA /* SAMUserStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMUserStory.h; sourceTree = "<group>"; };
 		6DF4BB8D16F5882700EACECA /* SAMUserStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMUserStory.m; sourceTree = "<group>"; };
+		6DF4BB8F16F5934600EACECA /* SAMTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMTask.h; sourceTree = "<group>"; };
+		6DF4BB9016F5934700EACECA /* SAMTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMTask.m; sourceTree = "<group>"; };
 		C3D34FD12FEF414CBE2AB747 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -154,6 +157,8 @@
 				6DF4BB8A16F5881600EACECA /* SAMSprintBacklog.m */,
 				6DF4BB8C16F5882600EACECA /* SAMUserStory.h */,
 				6DF4BB8D16F5882700EACECA /* SAMUserStory.m */,
+				6DF4BB8F16F5934600EACECA /* SAMTask.h */,
+				6DF4BB9016F5934700EACECA /* SAMTask.m */,
 			);
 			path = SAM;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 				6DF4BB8816F446AE00EACECA /* SAMClient.m in Sources */,
 				6DF4BB8B16F5881600EACECA /* SAMSprintBacklog.m in Sources */,
 				6DF4BB8E16F5882800EACECA /* SAMUserStory.m in Sources */,
+				6DF4BB9116F5934800EACECA /* SAMTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
