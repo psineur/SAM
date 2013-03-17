@@ -12,6 +12,7 @@
 
 /**
  * @todo add estimate property
+ * @todo add state property
  */
 @interface SAMTask : NSObject
 
