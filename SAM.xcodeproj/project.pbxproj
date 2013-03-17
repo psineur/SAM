@@ -22,6 +22,8 @@
 		6DF4BB8316F442CB00EACECA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6DF4BB8216F442CA00EACECA /* Podfile */; };
 		6DF4BB8516F4460100EACECA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF4BB8416F4460100EACECA /* SystemConfiguration.framework */; };
 		6DF4BB8816F446AE00EACECA /* SAMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB8716F446AE00EACECA /* SAMClient.m */; };
+		6DF4BB8B16F5881600EACECA /* SAMSprintBacklog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB8A16F5881600EACECA /* SAMSprintBacklog.m */; };
+		6DF4BB8E16F5882800EACECA /* SAMUserStory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB8D16F5882700EACECA /* SAMUserStory.m */; };
 		B0268C7668A74EBDA3A9304A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D34FD12FEF414CBE2AB747 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,10 @@
 		6DF4BB8416F4460100EACECA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6DF4BB8616F446AE00EACECA /* SAMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMClient.h; sourceTree = "<group>"; };
 		6DF4BB8716F446AE00EACECA /* SAMClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMClient.m; sourceTree = "<group>"; };
+		6DF4BB8916F5881500EACECA /* SAMSprintBacklog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMSprintBacklog.h; sourceTree = "<group>"; };
+		6DF4BB8A16F5881600EACECA /* SAMSprintBacklog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMSprintBacklog.m; sourceTree = "<group>"; };
+		6DF4BB8C16F5882600EACECA /* SAMUserStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMUserStory.h; sourceTree = "<group>"; };
+		6DF4BB8D16F5882700EACECA /* SAMUserStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMUserStory.m; sourceTree = "<group>"; };
 		C3D34FD12FEF414CBE2AB747 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -144,6 +150,10 @@
 				6DF4BB7F16F42D2F00EACECA /* SAMSettingsViewController.xib */,
 				6DF4BB8616F446AE00EACECA /* SAMClient.h */,
 				6DF4BB8716F446AE00EACECA /* SAMClient.m */,
+				6DF4BB8916F5881500EACECA /* SAMSprintBacklog.h */,
+				6DF4BB8A16F5881600EACECA /* SAMSprintBacklog.m */,
+				6DF4BB8C16F5882600EACECA /* SAMUserStory.h */,
+				6DF4BB8D16F5882700EACECA /* SAMUserStory.m */,
 			);
 			path = SAM;
 			sourceTree = "<group>";
@@ -309,6 +319,8 @@
 				6DF4BB5D16F428C700EACECA /* SAMAppDelegate.m in Sources */,
 				6DF4BB8016F42D2F00EACECA /* SAMSettingsViewController.m in Sources */,
 				6DF4BB8816F446AE00EACECA /* SAMClient.m in Sources */,
+				6DF4BB8B16F5881600EACECA /* SAMSprintBacklog.m in Sources */,
+				6DF4BB8E16F5882800EACECA /* SAMUserStory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

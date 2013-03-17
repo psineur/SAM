@@ -11,6 +11,8 @@
 #import <AFNetworking.h>
 #import <BlocksKit.h>
 #import "SAMClient.h"
+#import "SAMSprintBacklog.h"
+#import "SAMUserStory.h"
 
 @interface SAMAppDelegate ()
 
@@ -58,12 +60,18 @@
 
                                             return NO;
                                         }];
+
+         SAMSprintBacklog *backlog = [SAMSprintBacklog sprintBacklogWithProjectId: sprintBacklog[@"id"] client: [SAMClient sharedClient]];
+
+         // Log stuff after 5 secs, when it should be updated already
+         double delayInSeconds = 5.0;
+         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+             NSLog(@"SprintBacklog = %@", backlog);
+         });
+
          
-         [[SAMClient sharedClient] get: @[@"projects", [sprintBacklog[@"id"] stringValue], @"tasks"]
-                                 block: ^(NSDictionary *sprint)
-          {
-              NSLog(@"user stories = %@", sprint[@"data"]);
-          }];
+         
      }];
 }
 
