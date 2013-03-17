@@ -29,7 +29,21 @@
         self.id = [dict[@"id"] stringValue];
         self.name = dict[@"name"];
 
-        // TODO: fetch notes
+        // Fetch notes.
+        [client get:@[@"tasks", self.id] block: ^(NSDictionary *response)
+         {
+             self.notes = response[@"data"][@"notes"];
+             if ([self.notes isKindOfClass:[NSString class]])
+             {
+                 self.notes = [self.notes stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
+             }
+             else
+             {
+                 // TODO: report a problem to client
+             }
+         }];
+        
+        
         // TODO: fetch tasks (subtasks in term of Asana) & setup parent-child relationship
 
     }

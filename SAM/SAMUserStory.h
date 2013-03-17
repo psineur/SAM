@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) NSString *id;
 @property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *notes;
 
 + (instancetype) userStoryWithDictionary: (NSDictionary *) dict client: (SAMClient *) client;
 - (instancetype) initWithDictionary: (NSDictionary *) dict client: (SAMClient *) client;
