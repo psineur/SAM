@@ -25,6 +25,7 @@
 		6DF4BB8B16F5881600EACECA /* SAMSprintBacklog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB8A16F5881600EACECA /* SAMSprintBacklog.m */; };
 		6DF4BB8E16F5882800EACECA /* SAMUserStory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB8D16F5882700EACECA /* SAMUserStory.m */; };
 		6DF4BB9116F5934800EACECA /* SAMTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4BB9016F5934700EACECA /* SAMTask.m */; };
+		6DF4BB9516F599B500EACECA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF4BB9416F599B400EACECA /* QuartzCore.framework */; };
 		B0268C7668A74EBDA3A9304A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D34FD12FEF414CBE2AB747 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,8 @@
 		6DF4BB8D16F5882700EACECA /* SAMUserStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMUserStory.m; sourceTree = "<group>"; };
 		6DF4BB8F16F5934600EACECA /* SAMTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMTask.h; sourceTree = "<group>"; };
 		6DF4BB9016F5934700EACECA /* SAMTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMTask.m; sourceTree = "<group>"; };
+		6DF4BB9216F5999700EACECA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6DF4BB9416F599B400EACECA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C3D34FD12FEF414CBE2AB747 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DF4BB9516F599B500EACECA /* QuartzCore.framework in Frameworks */,
 				6DF4BB8516F4460100EACECA /* SystemConfiguration.framework in Frameworks */,
 				6DF4BB4A16F428C700EACECA /* Cocoa.framework in Frameworks */,
 				B0268C7668A74EBDA3A9304A /* libPods.a in Frameworks */,
@@ -122,6 +126,8 @@
 		6DF4BB4816F428C700EACECA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6DF4BB9416F599B400EACECA /* QuartzCore.framework */,
+				6DF4BB9216F5999700EACECA /* CoreGraphics.framework */,
 				6DF4BB8416F4460100EACECA /* SystemConfiguration.framework */,
 				6DF4BB4916F428C700EACECA /* Cocoa.framework */,
 				6DF4BB6716F428C800EACECA /* SenTestingKit.framework */,

@@ -11,5 +11,6 @@
 @interface SAMAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet NSView *mainView;
 
 @end
