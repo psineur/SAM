@@ -15,6 +15,7 @@ typedef void (^AFSuccessBlock)(NSURLRequest *, NSHTTPURLResponse *, id);
 
 @interface SAMClient ()
 @property(nonatomic, copy) NSString *privateAPIToken;
+@property(assign, nonatomic) NSTimeInterval delayForRequests;
 @end
 
 @implementation SAMClient
@@ -52,11 +53,37 @@ static SAMClient *_sharedClient = nil;
 
     AFFailureBlock failure = ^(NSURLRequest *request, NSHTTPURLResponse *response, id error, id JSON)
     {
+        // If "Too many requests"
+        if (response.statusCode == 429)
+        {
+            self.delayForRequests = 0;
+            
+            // Try to get delay from response
+            self.delayForRequests = MAX(self.delayForRequests, 1.0 );
+            @try {
+                self.delayForRequests = MAX(self.delayForRequests, [JSON[@"retry_after"] doubleValue]);
+            } @catch (NSException *exception) { }
+
+            // Redo same request with delay.
+            self.delayForRequests += 0.5;
+            [NSObject performBlock: ^()
+             {
+                 [self get: pathComponents block: aBlock];
+             }
+                        afterDelay: self.delayForRequests ];
+            NSLog(@"SAMClient: %@ need to wait %f seconds", path, self.delayForRequests);
+            return;
+        }
+        self.delayForRequests = 0;
+
+        // TODO: use error reported instead
         NSLog(@"error getting %@ = %@, additional: %@", path, error, JSON);
     };
 
     AFSuccessBlock success = ^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
     {
+        self.delayForRequests = 0;
+        
         if (![JSON isKindOfClass:[NSDictionary class]]) {
             failure(request, response, @"Dict expected!", JSON );
             return;
@@ -65,21 +92,30 @@ static SAMClient *_sharedClient = nil;
         aBlock(JSON);
     };    
 
+    AFJSONRequestOperation *jsonRequest = [self jsonRequestWithPath:path success:success failure: failure];
+    if (self.delayForRequests)
+    {
+        self.delayForRequests += 0.5;
+        [NSObject performBlock: ^()
+         {
+             [jsonRequest start];
+         }
+                    afterDelay: self.delayForRequests];
+    }
+    else
+    {
+        [jsonRequest start];
+    }
+}
+
+- (AFJSONRequestOperation *) jsonRequestWithPath: (NSString *)path success: (AFSuccessBlock) success failure: (AFFailureBlock) failure
+{
     NSURLRequest *request = [self requestWithMethod:@"GET" path: path parameters: @{}];
     AFJSONRequestOperation *jsonRequest = [AFJSONRequestOperation JSONRequestOperationWithRequest: request
                                                                                           success: success
                                                                                           failure: failure ];
-    [jsonRequest start];
-}
 
-// TODO: support "be chill" message
-//NSLocalizedDescription=Expected status code in (200-299), got 429}, additional: {
-//    errors =     (
-//                  {
-//                      message = "You have made too many requests recently. Please, be chill.";
-//                  }
-//                  );
-//    "retry_after" = 13;
-//}
+    return jsonRequest;
+}
 
 @end
