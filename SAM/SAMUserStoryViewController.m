@@ -15,6 +15,7 @@
 
 @property (strong, nonatomic) IBOutlet NSTextField *notesLabel;
 @property (strong, nonatomic) NSMutableArray *taskViewControllers;
+@property (strong, nonatomic) NSMutableArray *kvoTokens;
 
 @end
 
@@ -42,14 +43,29 @@
 
     [self updateLayout];
     [self updateTasks];
-    [self addObserverForKeyPath:@"model.notes" task:^(SELFTYPE sender)
+    [self addObserverFor:@"model.notes" task:^(SELFTYPE sender)
      {
          [sender updateLayout];
      }];
-    [self addObserverForKeyPath:@"model.tasks" task: ^(SELFTYPE sender)
+    [self addObserverFor:@"model.tasks" task: ^(SELFTYPE sender)
      {
          [sender updateTasks];
      }];
+}
+
+- (void) addObserverFor: (NSString *) keypath task: (void (^)(id)) taskBlock
+{
+    NSString *token = [ self addObserverForKeyPath: keypath task: taskBlock];
+    if (!self.kvoTokens)
+        self.kvoTokens = [NSMutableArray array];
+    [self.kvoTokens addObject: token];
+}
+
+- (void) dealloc
+{
+    for (NSString *token in self.kvoTokens) {
+        [self removeObserversWithIdentifier: token];
+    }
 }
 
 - (void) updateLayout
