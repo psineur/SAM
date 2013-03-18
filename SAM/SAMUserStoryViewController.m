@@ -9,10 +9,12 @@
 #import "SAMUserStoryViewController.h"
 #import "SAMDefines.h"
 #import <BlocksKit.h>
+#import "SAMTaskViewController.h"
 
 @interface SAMUserStoryViewController ()
 
 @property (strong, nonatomic) IBOutlet NSTextField *notesLabel;
+@property (strong, nonatomic) NSMutableArray *taskViewControllers;
 
 @end
 
@@ -39,9 +41,14 @@
 
 
     [self updateLayout];
+    [self updateTasks];
     [self addObserverForKeyPath:@"model.notes" task:^(SELFTYPE sender)
      {
          [sender updateLayout];
+     }];
+    [self addObserverForKeyPath:@"model.tasks" task: ^(SELFTYPE sender)
+     {
+         [sender updateTasks];
      }];
 }
 
@@ -71,6 +78,38 @@
     // Update notes label last to ensure origin is set ok
     self.notesLabel.frame = notesFrame;
     [self.notesLabel display];
+}
+
+#pragma mark Tasks Views
+
+- (void) updateTasks
+{
+    [[self.taskViewControllers valueForKeyPath:@"view"] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    self.taskViewControllers = [NSMutableArray arrayWithCapacity: self.model.tasks.count];
+
+    for (SAMTask *task in self.model.tasks)
+    {
+        NSViewController *vc = [self taskViewControllerWithModel: task];
+        [self.taskViewControllers addObject: vc];
+        [self.view addSubview: vc.view];
+    }
+}
+
+- (NSViewController *) taskViewControllerWithModel: (SAMTask *) task
+{
+    static const CGFloat margin = 3;
+    static CGFloat x = 0;
+    static CGFloat y = 0;
+    if (y == 99999)
+        y = self.view.frame.size.height;
+
+    SAMTaskViewController *vc = [SAMTaskViewController viewController];
+    vc.model = task;
+    x+=25;
+    y-=25;
+    vc.view.frame = CGRectMake( x, y, vc.view.frame.size.width, vc.view.frame.size.height);
+
+    return vc;
 }
 
 @end
