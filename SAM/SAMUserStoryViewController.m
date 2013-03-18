@@ -100,13 +100,27 @@
     static const CGFloat margin = 3;
     static CGFloat x = 0;
     static CGFloat y = 0;
-    if (y == 99999)
-        y = self.view.frame.size.height;
 
     SAMTaskViewController *vc = [SAMTaskViewController viewController];
     vc.model = task;
-    x+=25;
-    y-=25;
+
+    // Origin is bottom left, before each view position will be incremented, so
+    // first setup position is row = 0, column = - 1
+    if (![self.taskViewControllers count])
+    {
+        x = - vc.view.frame.size.width - margin;
+        y = - vc.view.frame.size.height - margin;
+    }
+
+    // Increment X, and if this is 3rd task - goto next line (reset X & increment Y)
+    x += vc.view.frame.size.width + margin;
+    if (x >= 2 * (vc.view.frame.size.width + margin))
+    {
+        x = 0;
+        y -= vc.view.frame.size.height + margin;
+    }
+    
+
     vc.view.frame = CGRectMake( x, y, vc.view.frame.size.width, vc.view.frame.size.height);
 
     return vc;
