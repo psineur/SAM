@@ -50,15 +50,16 @@
               block: ^(NSDictionary *response)
          {
              NSArray *tasksJSON = [NSArray arrayWithArray: response[@"data"]];
-             self.tasks = [NSMutableArray arrayWithCapacity: [tasksJSON count]];
 
+             NSMutableArray *tasks = [NSMutableArray arrayWithCapacity: [tasksJSON count]];
              [tasksJSON enumerateObjectsUsingBlock:^( id obj, NSUInteger idx, BOOL *stop)
               {
                   SAMTask *task = [SAMTask taskWithDictionary: obj client: client];
                   task.parent = self;
                   if (task)
-                      [self.tasks addObject: task];
+                      [tasks addObject: task];
               }];
+             self.tasks = tasks;
          }];
 
     }
