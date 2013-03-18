@@ -10,6 +10,9 @@
 #import <AFNetworking/AFNetworking.h>
 #import <BlocksKit.h>
 
+typedef void (^AFFailureBlock)(NSURLRequest *, NSHTTPURLResponse *, id, id);
+typedef void (^AFSuccessBlock)(NSURLRequest *, NSHTTPURLResponse *, id);
+
 @interface SAMClient ()
 @property(nonatomic, copy) NSString *privateAPIToken;
 @end
@@ -47,24 +50,25 @@ static SAMClient *_sharedClient = nil;
 {
     NSString *path = [NSString pathWithComponents: pathComponents];
 
-    void (^onError)(id, id) = ^(id error, id additionalStuff)
+    AFFailureBlock failure = ^(NSURLRequest *request, NSHTTPURLResponse *response, id error, id JSON)
     {
-        NSLog(@"error getting %@ = %@, additional: %@", path, error, additionalStuff);
+        NSLog(@"error getting %@ = %@, additional: %@", path, error, JSON);
     };
 
-    NSURLRequest *request = [self requestWithMethod:@"GET" path: path parameters: @{}];
-    AFJSONRequestOperation *jsonRequest =
-    [AFJSONRequestOperation JSONRequestOperationWithRequest: request
-                                                    success: ^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-                                                        if (![JSON isKindOfClass:[NSDictionary class]]) {
-                                                            onError(@"Dict expected!", JSON );
-                                                        }
+    AFSuccessBlock success = ^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
+    {
+        if (![JSON isKindOfClass:[NSDictionary class]]) {
+            failure(request, response, @"Dict expected!", JSON );
+            return;
+        }
 
-                                                        aBlock(JSON);
-                                                    }
-                                                    failure: ^(NSURLRequest *request, NSHTTPURLResponse *response, id error, id JSON) {
-                                                        onError(error, JSON);
-                                                    }];
+        aBlock(JSON);
+    };    
+
+    NSURLRequest *request = [self requestWithMethod:@"GET" path: path parameters: @{}];
+    AFJSONRequestOperation *jsonRequest = [AFJSONRequestOperation JSONRequestOperationWithRequest: request
+                                                                                          success: success
+                                                                                          failure: failure ];
     [jsonRequest start];
 }
 
