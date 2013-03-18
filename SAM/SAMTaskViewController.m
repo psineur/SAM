@@ -38,6 +38,21 @@
      {
          [sender updateLayout];
      }];
+    [self addObserverForKeyPath:@"model.status" task:^(SELFTYPE sender)
+     {
+         switch (sender.model.status) {
+             case kSAMTaskStatusPending:
+             case kSAMTaskStatusPlanned:
+                 sender.view.layer.backgroundColor = SAM_COLOR_TASK();
+                 break;
+             case kSAMTaskStatusInProgress:
+                 sender.view.layer.backgroundColor = SAM_COLOR_TASK_IN_PROGRESS();
+                 break;
+             case kSAMTaskStatusComplete:
+                 sender.view.layer.backgroundColor = SAM_COLOR_TASK_COMPLETE();
+                 break;
+         }
+     }];
 }
 
 // TODO: common method for userStory & task
