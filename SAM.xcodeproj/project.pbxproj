@@ -80,6 +80,7 @@
 		6DF4BB9916F5B37800EACECA /* SAMUserStoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMUserStoryViewController.h; sourceTree = "<group>"; };
 		6DF4BB9A16F5B37A00EACECA /* SAMUserStoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMUserStoryViewController.m; sourceTree = "<group>"; };
 		6DF4BB9B16F5B37B00EACECA /* SAMUserStoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SAMUserStoryViewController.xib; sourceTree = "<group>"; };
+		6DF4BBA016F697AE00EACECA /* SAMDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMDefines.h; sourceTree = "<group>"; };
 		C3D34FD12FEF414CBE2AB747 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -155,6 +156,7 @@
 		6DF4BB4F16F428C700EACECA /* SAM */ = {
 			isa = PBXGroup;
 			children = (
+				6DF4BBA016F697AE00EACECA /* SAMDefines.h */,
 				6DF4BB5B16F428C700EACECA /* SAMAppDelegate.h */,
 				6DF4BB5C16F428C700EACECA /* SAMAppDelegate.m */,
 				6DF4BB5E16F428C800EACECA /* MainMenu.xib */,
