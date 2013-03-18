@@ -7,8 +7,12 @@
 //
 
 #import "SAMUserStoryViewController.h"
+#import "SAMDefines.h"
+#import <BlocksKit.h>
 
 @interface SAMUserStoryViewController ()
+
+@property (strong, nonatomic) IBOutlet NSTextField *notesLabel;
 
 @end
 
@@ -32,6 +36,47 @@
     [viewLayer setBackgroundColor:CGColorCreateGenericRGB(0.7, 0.7, 0.7, 1.0)];
     [self.view setWantsLayer:YES];
     [self.view setLayer:viewLayer];
+
+
+    [self updateLayout];
+    [self addObserverForKeyPath:@"model.notes" task:^(SELFTYPE sender)
+     {
+         [sender updateLayout];
+     }];
+
+    double delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [self updateLayout];
+    });
+}
+
+- (void) updateLayout
+{
+    static const CGFloat kMaxLabelHeight = 10000.0f;
+
+    if (!self.notesLabel)
+        return;
+
+    // Calculate new size for notes label
+    NSRect oldFrameNotes = [self.notesLabel frame];
+    NSRect newFrameNotes = oldFrameNotes;
+    NSRect notesFrame = [self.notesLabel frame];
+    newFrameNotes.size.height = kMaxLabelHeight;
+    newFrameNotes.size = [[self.notesLabel cell] cellSizeForBounds:newFrameNotes];
+    if(NSHeight(newFrameNotes) > NSHeight(oldFrameNotes))
+        notesFrame.size.height += (NSHeight(newFrameNotes) - NSHeight(oldFrameNotes));
+
+    // Resize whole user story view to fit notes label
+    CGFloat newHeight = MAX( self.view.frame.size.height + notesFrame.size.height - oldFrameNotes.size.height, self.view.frame.size.height);
+    CGRect newFrame = self.view.frame;
+    newFrame.size.height = newHeight;
+    self.view.frame = newFrame;
+    [self.view display];
+
+    // Update notes label last to ensure origin is set ok
+    self.notesLabel.frame = notesFrame;
+    [self.notesLabel display];
 }
 
 @end
