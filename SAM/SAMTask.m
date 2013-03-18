@@ -8,6 +8,13 @@
 
 #import "SAMTask.h"
 #import "SAMClient.h"
+#import <BlocksKit.h>
+
+@interface SAMTask()
+
+@property (strong, nonatomic) NSTimer *updateTimer;
+
+@end
 
 @implementation SAMTask
 
@@ -30,6 +37,9 @@
         self.id = [dict[@"id"] stringValue];
         self.name = dict[@"name"];
 
+        // Update status right now and every 3 secs.
+        void (^updateStatus)(NSTimeInterval) = ^(NSTimeInterval notUsed)
+        {
         // Fetch self to update status
         [client get: @[@"tasks", self.id]
               block: ^(NSDictionary *response)
@@ -55,10 +65,19 @@
                  // TODO: report a problem
              }
          }];
+        };
+        updateStatus(0);
+        self.updateTimer = [NSTimer timerWithTimeInterval: 2.0 block: updateStatus repeats: YES];
+        [[NSRunLoop mainRunLoop] addTimer: self.updateTimer forMode: NSRunLoopCommonModes];
 
     }
 
     return self;
+}
+
+- (void) dealloc
+{
+    [self.updateTimer invalidate];
 }
 
 - (NSString *) description
