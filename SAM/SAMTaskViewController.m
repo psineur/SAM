@@ -13,6 +13,7 @@
 @interface SAMTaskViewController ()
 
 @property (strong, nonatomic) IBOutlet NSTextField *mainLabel;
+@property (strong, nonatomic) NSMutableArray *kvoTokens;
 
 @end
 
@@ -34,11 +35,11 @@
     [self.view setLayer:viewLayer];
 
     [self updateLayout];
-    [self addObserverForKeyPath:@"model.name" task:^(SELFTYPE sender)
+    [self addObserverFor: @"model.name" task:^(SELFTYPE sender)
      {
          [sender updateLayout];
      }];
-    [self addObserverForKeyPath:@"model.status" task:^(SELFTYPE sender)
+    [self addObserverFor: @"model.status" task:^(SELFTYPE sender)
      {
          switch (sender.model.status) {
              case kSAMTaskStatusPending:
@@ -53,6 +54,21 @@
                  break;
          }
      }];
+}
+
+- (void) addObserverFor: (NSString *) keypath task: (void (^)(id)) taskBlock
+{
+    NSString *token = [ self addObserverForKeyPath: keypath task: taskBlock];
+    if (!self.kvoTokens)
+        self.kvoTokens = [NSMutableArray array];
+    [self.kvoTokens addObject: token];
+}
+
+- (void) dealloc
+{
+    for (NSString *token in self.kvoTokens) {
+        [self removeObserversWithIdentifier: token];
+    }    
 }
 
 // TODO: common method for userStory & task
