@@ -40,31 +40,31 @@
         // Update status right now and every 3 secs.
         void (^updateStatus)(NSTimeInterval) = ^(NSTimeInterval notUsed)
         {
-        // Fetch self to update status
-        [client get: @[@"tasks", self.id]
-              block: ^(NSDictionary *response)
-         {
-             NSDictionary *taskJSON = response[@"data"];
-
-             if ([taskJSON isKindOfClass: [NSDictionary class]])
+            // Fetch self to update status
+            [client get: @[@"tasks", self.id]
+                  block: ^(NSDictionary *response)
              {
-                 if ( [taskJSON[@"assignee"] isKindOfClass:[NSNull class]])
+                 NSDictionary *taskJSON = response[@"data"];
+
+                 if ([taskJSON isKindOfClass: [NSDictionary class]])
                  {
-                     self.status = kSAMTaskStatusPlanned;
+                     if ( [taskJSON[@"assignee"] isKindOfClass:[NSNull class]])
+                     {
+                         self.status = kSAMTaskStatusPlanned;
+                     }
+                     else
+                     {
+                         self.status = kSAMTaskStatusInProgress;
+                     }
+
+                     if ([taskJSON[@"completed"] boolValue])
+                         self.status = kSAMTaskStatusComplete;
                  }
                  else
                  {
-                     self.status = kSAMTaskStatusInProgress;
+                     // TODO: report a problem
                  }
-
-                 if ([taskJSON[@"completed"] boolValue])
-                     self.status = kSAMTaskStatusComplete;
-             }
-             else
-             {
-                 // TODO: report a problem
-             }
-         }];
+             }];
         };
         updateStatus(0);
         self.updateTimer = [NSTimer timerWithTimeInterval: 2.0 block: updateStatus repeats: YES];
