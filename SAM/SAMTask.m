@@ -30,6 +30,32 @@
         self.id = [dict[@"id"] stringValue];
         self.name = dict[@"name"];
 
+        // Fetch self to update status
+        [client get: @[@"tasks", self.id]
+              block: ^(NSDictionary *response)
+         {
+             NSDictionary *taskJSON = response[@"data"];
+
+             if ([taskJSON isKindOfClass: [NSDictionary class]])
+             {
+                 if ( [taskJSON[@"assignee"] isKindOfClass:[NSNull class]])
+                 {
+                     self.status = kSAMTaskStatusPlanned;
+                 }
+                 else
+                 {
+                     self.status = kSAMTaskStatusInProgress;
+                 }
+
+                 if ([taskJSON[@"completed"] boolValue])
+                     self.status = kSAMTaskStatusComplete;
+             }
+             else
+             {
+                 // TODO: report a problem
+             }
+         }];
+
     }
 
     return self;
