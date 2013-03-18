@@ -29,7 +29,7 @@
     [super loadView];
 
     CALayer *viewLayer = [CALayer layer];
-    [viewLayer setBackgroundColor:CGColorCreateGenericRGB(197.0f/255.0f, 106.0f/255.0f, 1.0f, 1.0f)];
+    [viewLayer setBackgroundColor: SAM_COLOR_TASK()];
     [self.view setWantsLayer:YES];
     [self.view setLayer:viewLayer];
 

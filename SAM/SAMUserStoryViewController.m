@@ -35,7 +35,7 @@
     [super loadView];
 
     CALayer *viewLayer = [CALayer layer];
-    [viewLayer setBackgroundColor:CGColorCreateGenericRGB(0.7, 0.7, 0.7, 1.0)];
+    [viewLayer setBackgroundColor: SAM_COLOR_USERSTORY()];
     [self.view setWantsLayer:YES];
     [self.view setLayer:viewLayer];
 

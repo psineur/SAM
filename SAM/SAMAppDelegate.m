@@ -14,6 +14,7 @@
 #import "SAMSprintBacklog.h"
 #import "SAMUserStory.h"
 #import "SAMUserStoryViewController.h"
+#import "SAMDefines.h"
 
 @interface SAMAppDelegate ()
 
@@ -35,7 +36,7 @@
     [SAMClient sharedClient].APIToken = self.settings.APIToken;
 
     CALayer *viewLayer = [CALayer layer];
-    [viewLayer setBackgroundColor:CGColorCreateGenericRGB(0.8, 0.9, 0.0, 1.0)];
+    [viewLayer setBackgroundColor: SAM_COLOR_CORKBOARD()];
     [self.mainView setWantsLayer: YES];
     [self.mainView setLayer: viewLayer];
 }
