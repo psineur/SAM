@@ -68,4 +68,14 @@ static SAMClient *_sharedClient = nil;
     [jsonRequest start];
 }
 
+// TODO: support "be chill" message
+//NSLocalizedDescription=Expected status code in (200-299), got 429}, additional: {
+//    errors =     (
+//                  {
+//                      message = "You have made too many requests recently. Please, be chill.";
+//                  }
+//                  );
+//    "retry_after" = 13;
+//}
+
 @end
