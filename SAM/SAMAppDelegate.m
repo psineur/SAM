@@ -60,6 +60,7 @@
     [SAMClient sharedClient].APIToken = self.settings.APIToken;
 
     // Start fetching data.
+    // TODO: use KVO on SprintBacklog instead of delay to create views.
     [[SAMClient sharedClient] get: @[@"workspaces", self.settings.workspaceID, @"projects"]
                             block: ^(NSDictionary *jsonObject)
      {
